@@ -1,5 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
+import CustomLink from '../CustomLink/CustomLink';
+
 
 const Friend = (props) => {
     const {name, username, id} = props.friend;
@@ -11,7 +13,7 @@ const Friend = (props) => {
     return (
         <div>
             <h3>{name}</h3>
-           
+          <CustomLink to={'/friend/' + id}>Show Detail</CustomLink>
             <button onClick={showFriendDetail}>{username} id:{id}</button>
         </div>
     );
